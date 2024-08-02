@@ -10,7 +10,7 @@ The right integration model for a given developer portal use case is always cont
 
 Before discussing the GitOps-oriented integration pattern for which I will advocate, we can examine the more common and arguably more intuitive integration pattern in order to provide a standard alternative approach for comparison. This paradigm for Backstage integration usually relies heavily on custom Backstage plugin development. Typically targeting RESTful endpoints, plugins are developed to introduce new capabilities such as scaffolder actions, each designed to interact with a particular platform component's native API and/or orchestrate several of them.
 
-![Backstage with synchronous API interactions](images/backstage-synchronous-api.png?raw=true "Backstage with synchronous API interactions")
+![Backstage with synchronous API interactions](/_posts/images/backstage-synchronous-api.png?raw=true "Backstage with synchronous API interactions")
 
 In this model, when users interact with the portal, e.g. run scaffolder actions, platform management commands are issued in real-time, typically with synchronous API calls to platform component APIs. (A platform component could be any tool used in platform operations such as a certificate issuer, a monitoring service, an artifact repository, etc.) This approach is intuitive and aligns with the notion of Backstage plugins. In theory, the integration model enables developers to execute orchestrations of platform management actions, which in many cases could be useful for developer operations. As long as a given platform component exposes a management API, some integration is likely possible with custom plugin development, even unique, possibly "home-grown" platform components.
 
@@ -30,7 +30,7 @@ There is another, often overlooked, integration approach that can expose a rich 
 
 In a GitOps context, Backstage's ability to publish scaffolded content to Git repositories potentially exposes any given platform capability to developers, especially when the target platform is Kubernetes-based. In turn, a Git-oriented Backstage entity discovery strategy is an intuitive fit. In a GitOps context, nothing can be a better source of truth for entity inventory than the enterprise Git provider.
 
-![Backstage with GitOps](images/backstage-gitops.png?raw=true "Backstage with GitOps")
+![Backstage with GitOps](/_posts/images/backstage-gitops.png?raw=true "Backstage with GitOps")
 
 In my opinion, Kubernetes is a more accommodating environment than Backstage for platform and developer automation for at least the following reasons:
 
