@@ -4,7 +4,7 @@ body {
 }
 
 a:link, a:visited {
-  color: red;
+  color: #ee0000;
 }
 
 a:hover {
