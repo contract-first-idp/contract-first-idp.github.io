@@ -1,14 +1,14 @@
 body {
   color: white;
-  background-color: black;
+  background-color: #282c33;
 }
 
 a:link, a:visited {
-  color: #ee0000;
+  color: #9391ff;
 }
 
 a:hover {
-  color: lightgray;
+  color: #f77e53;
 }
 
 hr {
