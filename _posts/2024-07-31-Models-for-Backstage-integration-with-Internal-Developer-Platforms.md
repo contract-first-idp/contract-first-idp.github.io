@@ -8,13 +8,13 @@ The right integration model for a given developer portal use case is always cont
 
 ## Synchronous platform interaction via APIs
 
-Before discussing the GitOps-oriented integration pattern for which I will advocate, we can examine the more common and arguably more intuitive integration pattern in order to provide an standard alternative approach for comparison. This paradigm for Backstage integration usually relies heavily on custom Backstage plugin development. Typically targeting RESTful endpoints, plugins are developed to introduce new capabilities such as scaffolder actions, each designed to interact with a particular platform component's native API and/or orchestrate several of them.
+Before discussing the GitOps-oriented integration pattern for which I will advocate, we can examine the more common and arguably more intuitive integration pattern in order to provide a standard alternative approach for comparison. This paradigm for Backstage integration usually relies heavily on custom Backstage plugin development. Typically targeting RESTful endpoints, plugins are developed to introduce new capabilities such as scaffolder actions, each designed to interact with a particular platform component's native API and/or orchestrate several of them.
 
 ![Backstage with synchronous API interactions](images/backstage-synchronous-api.png?raw=true "Backstage with synchronous API interactions")
 
 In this model, when users interact with the portal, e.g. run scaffolder actions, platform management commands are issued in real-time, typically with synchronous API calls to platform component APIs. (A platform component could be any tool used in platform operations such as a certificate issuer, a monitoring service, an artifact repository, etc.) This approach is intutive and aligns with the notion of Backstage plugins. In theory, the integration model enables developers to execute orchestrations of platform management actions, which in many cases could be useful for developer operations. As long as a given platform component exposes a management API, some integration is likely possible with custom plugin development, even unique, possibly "home-grown" platform components.
 
-However, I caution against too much plugin-oriented portal customization, especially for the purposes of automating platform operations because this risks positioning the developer portal as a critical process orchestration component of the overall developer platform architecture. Custom Backstage plugin development may be useful for some organizations, but we propose that designing a significant portion of platform and developer operations automation as an extension of the developer portal is not desireable for most enterprises given:
+However, I caution against too much plugin-oriented portal customization, especially for the purposes of automating platform operations because this risks positioning the developer portal as a critical process orchestration component of the overall developer platform architecture. Custom Backstage plugin development may be useful for some organizations, but we propose that designing a significant portion of platform and developer operations automation as an extension of the developer portal is not desirable for most enterprises given:
 
 - cost of implementing custom plugins
 - cost of maintaining plugin lifecycle
@@ -32,7 +32,7 @@ In a GitOps context, Backstage's ability to publish scaffolded content to Git re
 
 ![Backstage with GitOps](images/backstage-gitops.png?raw=true "Backstage with GitOps")
 
-In my opinion, Kubernetes is a more accomodating environment than Backstage for platform and developer automation for at least the following reasons:
+In my opinion, Kubernetes is a more accommodating environment than Backstage for platform and developer automation for at least the following reasons:
 
 - supports polyglot automation implementations
 - designed for scaling processes across infrastructure
