@@ -1,6 +1,8 @@
-# Models for Backstage integration with Internal Developer Platforms
+---
+author: davgordo
+---
 
-Author: @davgordo
+# Models for Backstage integration with Internal Developer Platforms
 
 In my experience working on Backstage-based Internal Developer Portal pilot and adoption initiatives, I have observed two fundamental contrasting patterns for Backstage integration with the underlying developer platform. Especially within the context of a Kubernetes-based platform for container infrastructure, one specific integration pattern seems to offer a higher return on investment. This article will explore the contrasting integration model, how they are different, and the potential implications for ongoing developer portal operations and the developer platform itself.
 
