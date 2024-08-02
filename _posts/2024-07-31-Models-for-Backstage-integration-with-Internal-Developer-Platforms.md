@@ -1,6 +1,5 @@
 ---
-author: David Gordon
-authorGithub: davgordo
+author: [David Gordon](https://github.com/davgordo)
 ---
 
 # Models for Backstage integration with Internal Developer Platforms
