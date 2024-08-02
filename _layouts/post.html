@@ -13,7 +13,11 @@ layout: default
       </time>
       {% assign author = page.author | default: site.author %}
       {%- if author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">
+              <a href="https://github.com/{{ authorGithub }}">{{ author }}</a>
+            </span>
+          </span>
       {%- endif -%}</p>
   </header>
 
