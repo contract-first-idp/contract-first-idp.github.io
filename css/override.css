@@ -3,6 +3,14 @@ body {
   background-color: black;
 }
 
+a:link, a:visited {
+  color: red;
+}
+
+a:hover {
+  color: lightgray;
+}
+
 hr {
   margin-top: 30px;
   margin-bottom: 20px;
