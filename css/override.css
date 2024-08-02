@@ -16,6 +16,16 @@ hr {
   margin-bottom: 20px;
 }
 
+.site-title,.site-title:visited,.site-nav .page-link {
+  color: #1c9494;
+}
+
+@media screen and (max-width: 600px) {
+  .site-nav {
+    background-color: darkgrey;
+  }
+}
+
 /* Post navigation links */
 .post_navi {
   display: flex;
