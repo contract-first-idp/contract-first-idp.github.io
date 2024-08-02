@@ -8,7 +8,7 @@ a:link, a:visited {
 }
 
 a:hover {
-  color: #f77e53;
+  color: #ed82c2 ;
 }
 
 hr {
@@ -16,7 +16,11 @@ hr {
   margin-bottom: 20px;
 }
 
-.site-title,.site-title:visited,.site-nav .page-link {
+.site-title,.site-title:visited{
+  color: white;
+}
+
+.site-nav .page-link {
   color: #1c9494;
 }
 
