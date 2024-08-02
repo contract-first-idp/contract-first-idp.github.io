@@ -14,7 +14,7 @@ layout: default
       {% assign author = page.author | default: site.author %}
       {%- if author -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">{{ author }}</span>
+            <span class="p-author h-card" itemprop="name"><a href="https://github.com/{{ github }}" target="_blank">{{ author }}</a></span>
           </span>
       {%- endif -%}</p>
   </header>
