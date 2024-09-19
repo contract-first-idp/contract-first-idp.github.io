@@ -16,6 +16,11 @@ hr {
   margin-bottom: 20px;
 }
 
+pre,code {
+  background-color: #111;
+}
+
+
 .site-title,.site-title:visited{
   color: white;
 }
