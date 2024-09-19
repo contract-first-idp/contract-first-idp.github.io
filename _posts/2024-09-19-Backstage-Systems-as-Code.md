@@ -70,14 +70,14 @@ These options promote looser coupling between the developer portal and the Enter
 
 ## Alignment with GitOps
 
- In a GitOps-driven environment, composition is a common technique for representing tiered relationship between domains, systems, and components. There are several techniques for achieving a composition pattern with a GitOps scheme including ArgoCD “app of apps”, Helm umbrella charts, and Kustomize external resource references.
+In a GitOps-driven environment, composition is a common technique for representing tiered relationship between domains, systems, and components. There are several techniques for achieving a composition pattern with a GitOps scheme including ArgoCD “app of apps”, Helm umbrella charts, and Kustomize external resource references.
 
- So, a System may not be a deployable asset in and of itself, it may be only a collection of references to sub-entities (Components, APIs, and Resources), but it still requires a Git manifest if for no other reason than to provide the link between the top-level GitOps manifest and each of its sub-entities.
+So, a System may not be a deployable asset in and of itself, it may be only a collection of references to sub-entities (Components, APIs, and Resources), but it still requires a Git manifest if for no other reason than to provide the link between the top-level GitOps manifest and each of its sub-entities.
 
- ![GitOps Entity Hierarchy](/images/gitops-hierarchy.png?raw=true "GitOps Entity Hierarchy")
+![GitOps Entity Hierarchy](/images/gitops-hierarchy.png?raw=true "GitOps Entity Hierarchy")
 
- But Systems are often more than just a link. In the context of Kubernetes, systems align well with the concept of namespaces. Namespaces are contain other resources and are used to establish tenant boundaries. Additionally platform teams may want to instrument each platform tenant namespace with a standard set of resources and configurations, for example, perhaps container registry pull secrets or RBAC configuration. The System lifecycle maps nicely to namespace management. Namespace management built into the Component lifecycle tends to be awkward when more than one Component shares a namespace, because in this case, namespace provisioning should only needs to happen before the first component is introduced.
+But Systems are often more than just a link. In the context of Kubernetes, systems align well with the concept of namespaces. Namespaces are contain other resources and are used to establish tenant boundaries. Additionally platform teams may want to instrument each platform tenant namespace with a standard set of resources and configurations, for example, perhaps container registry pull secrets or RBAC configuration. The System lifecycle maps nicely to namespace management. Namespace management built into the Component lifecycle tends to be awkward when more than one Component shares a namespace, because in this case, namespace provisioning should only needs to happen before the first component is introduced.
 
- ## Conclusion
+## Conclusion
 
- Contract-First IDP is influenced by an architectural decision to manage Backstage Systems-as-code. We are committed to this concept in order to be developer-centric, GitOps-oriented, and loosely coupled with external system. We also benefit from full control of System entity metadata and entity specification. This does not prevent us from potentially enforcing policy to ensure that Backstage Systems align with an Enterprise asset management tool.
+Contract-First IDP is influenced by an architectural decision to manage Backstage Systems-as-code. We are committed to this concept in order to be developer-centric, GitOps-oriented, and loosely coupled with external system. We also benefit from full control of System entity metadata and entity specification. This does not prevent us from potentially enforcing policy to ensure that Backstage Systems align with an Enterprise asset management tool.
