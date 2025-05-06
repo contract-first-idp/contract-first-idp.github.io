@@ -31,7 +31,7 @@ This creates a feedback loop between producers and consumers—ensuring changes 
 
 Let’s look at a simplified Pact setup for a Node.js API:
 
-```js
+```javascript
 const { Pact } = require('@pact-foundation/pact');
 const provider = new Pact({ 
   consumer: 'FrontendApp',
