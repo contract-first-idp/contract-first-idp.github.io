@@ -1,6 +1,6 @@
 # Contract-First IDP GitHub Pages
 
-[view site](https://contract-first-idp.githubpages.io/)
+[view site](https://contract-first-idp.github.io/)
 
 ## Run locally
 
