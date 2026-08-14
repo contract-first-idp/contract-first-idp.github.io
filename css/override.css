@@ -809,12 +809,16 @@ a:hover { color: inherit; }
   .cf-shell { width: min(100% - 36px, var(--cf-shell)); }
   .cf-navlinks a:not(.cf-pill) { display: none; }
   .cf-hero { padding-top: 34px; gap: 20px; }
-  .cf-lifecycle-wrap { min-height: 360px; overflow: hidden; }
+  .cf-lifecycle-wrap { min-height: 300px; overflow: hidden; }
   .cf-lifecycle {
-    transform: scale(.68);
+    width: 690px;
+    min-width: 690px;
+    max-width: none;
+    flex: 0 0 690px;
+    transform: scale(.48);
     transform-origin: top center;
     height: 445px;
-    margin-bottom: -118px;
+    margin-bottom: -205px;
   }
   .cf-section { padding: 48px 0; }
   .cf-section-head h2 { font-size: 30px; }
