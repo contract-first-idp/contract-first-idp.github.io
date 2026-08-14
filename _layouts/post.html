@@ -1,28 +1,34 @@
 ---
 layout: default
 ---
-<link href="/css/override.css" rel="stylesheet" type="text/css">
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <header class="post-header">
+<article class="post h-entry article-shell" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="article-header">
+    <a class="article-eyebrow" href="{{ "/archive.html" | relative_url }}">Contract-First IDP Journal</a>
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
+    {% if page.description %}<p class="article-dek">{{ page.description }}</p>{% endif %}
+    <div class="article-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
+        {{ page.date | date: "%B %-d, %Y" }}
       </time>
       {% assign author = page.author | default: site.author %}
-      {%- if author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name"><a href="https://github.com/{{ github }}" target="_blank">{{ author }}</a></span>
-          </span>
-      {%- endif -%}</p>
+      {% assign github = page.github_username | default: site.github_username %}
+      {% if author %}
+        <span aria-hidden="true">•</span>
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <a class="p-author h-card" itemprop="name" href="https://github.com/{{ github }}">{{ author }}</a>
+        </span>
+      {% endif %}
+      {% if page.updated %}
+        <span aria-hidden="true">•</span>
+        <span>Updated {{ page.updated | date: "%B %-d, %Y" }}</span>
+      {% endif %}
+    </div>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
+  <div class="post-content e-content article-body" itemprop="articleBody">
     {{ content }}
-    {% include navlinks.html %}
   </div>
 
+  {% include navlinks.html %}
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
