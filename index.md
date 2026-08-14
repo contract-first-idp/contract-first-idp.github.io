@@ -12,7 +12,7 @@ title: Contract-First IDP
       <a class="cf-btn cf-btn-primary" href="{{ "/2026/08/13/Contract-First-IDP-v1.html" | relative_url }}">Read the v1.0 story</a>
       <a class="cf-btn" href="#architecture">Explore the architecture</a>
     </div>
-    <div class="cf-hero-note">Developer Hub captures intent · Git records it · Argo CD reconciles it</div>
+    <div class="cf-hero-note">Developer Hub captures intent · Git records · Argo CD reconciles</div>
   </div>
 
   <div class="cf-lifecycle-wrap" aria-label="Contract-first lifecycle">
